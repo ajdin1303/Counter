@@ -2,6 +2,7 @@
 let counter = document.querySelector('#counter');
 let increaseBtn = document.querySelector('#increase-btn');
 let decreaseBtn = document.querySelector('#decrease-btn');
+let title = document.querySelector('#title');
 //
 
 let count = 0;
@@ -30,10 +31,13 @@ decreaseBtn.addEventListener('click', () => {
 const counterColor = () => {
     if (count < 0){
         counter.style.color = "red";
-    } else if (count === 0){
+        title.style.color = "red";
+        } else if (count === 0){
         counter.style.color = "white";
+        title.style.color = "white";
     }else{
         counter.style.color = "aqua";
+        title.style.color = "aqua";
     }
 }
 //
